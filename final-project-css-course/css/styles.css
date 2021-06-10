@@ -1,0 +1,300 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* HEADER SECTION */
+
+#header-section{
+    background-color: white;
+    font-size: 14px;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#header-section a{
+    color: black;
+    font-weight: 600;
+}
+
+#header-section img{
+    width: 45px;
+}
+
+.header_menu ul li{
+    display: inline;
+    margin: 0px 10px;
+}
+
+.green-button{
+    font-size: 13px;
+    background-color: #ACC430;
+    border: 1px solid #ACC430;
+    padding: 5px 30px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.green-button:hover{
+    background-color: #bfda3d;
+    border: 1px solid #ACC430;
+    cursor: pointer;
+}
+
+.green-button a{
+    color: white !important;
+}
+
+/* END HEADER SECTION */
+
+/* HERO SECTION */
+#hero-section{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;background-size: cover;
+    background-image: url('/final-project-css-course/assets/hero-image.jpg');
+}
+
+#hero-section .hero-text{
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0px 10%;
+}
+
+#hero-section .hero-text h1{
+    margin: 0px;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+#hero-section .hero-text p{
+    margin-top: 10px;
+    color: gray;
+}
+
+/* END HERO SECTION */
+
+/* STEPS SECTION */
+
+#steps-section{
+    display: flex;
+}
+
+.steps_step > i{
+    font-size: 60px;
+}
+
+.steps_step:hover > i{
+    font-size: 70px
+}
+
+.steps_step{
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.steps_step:nth-of-type(1){
+    background-color: #53BFA8;
+}
+
+.steps_step:nth-of-type(2){
+    background-color: #94A33F;
+}
+
+.steps_step:nth-of-type(3){
+    background-color: #EBB476;
+}
+
+.steps_step:nth-of-type(4){
+    background-color: #FFA7AF;
+}
+
+/* END STEPS SECTION */
+
+/* VEGAN STORE SECTION */
+
+#vegan-store-section{
+    padding: 5% 0%;
+    background-color: #FAEEE4;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#vegan-store-section h1{
+    font-size: 50px;
+    margin: 0px;
+}
+.vegan-store_subtitle{
+    font-family: 'Just Another Hand', cursive;
+    font-size: 35px;
+    margin: 0px;
+    color: green;
+}
+
+.vegan-store_items{
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vegan-store_item{
+    margin: 30px;
+}
+
+.vegan-store_item > i{
+    color: white;
+    font-size: 70px;
+    background-color: #EAB376;
+    padding: 30px;
+    border-radius: 100px;
+}
+
+.vegan-store_item:hover > i{
+    font-size: 80px;
+}
+
+.vegan-store_item > p{
+    color: grey;
+}
+/* END VEGAN STORE SECTION */
+
+/* TESTIMONIAL SECTION */
+
+#testimonials-section{
+    padding: 5% 12%;
+    background-color: white;
+    height: 600px;
+    text-align: center;
+}
+
+#testimonials-section h1{
+    font-size: 50px;
+    margin: 0px;
+}
+
+.testimonials_subtitle{
+    font-family: 'Just Another Hand', cursive;
+    font-size: 35px;
+    margin: 0px;
+    color: grey;
+}
+
+.testimonial_cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px 25px;
+    width: 400px;
+    background-color: rgb(238, 238, 238);
+}
+
+.testimonial_card > p{
+    font-size: 14px;
+    color: grey;
+}
+
+.testimonial_card_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background-image: url('https://d1dlh1v05qf6d3.cloudfront.net/information/uploads/2018/07/Karen-Lewis-3-1260x840.jpg');
+    background-size: cover;
+}
+
+.testimonial_card_info{
+    display: flex;
+    flex-direction: column;
+}
+
+/* END TESTIMONIAL SECTION */
+
+/* FOLLOW-US SECTION */
+
+#follow-us-section{
+    height: 600px;
+    display: flex;
+}
+
+.follow-us_left{
+    width: 65%;
+    height: 100%;
+    background-image: url('/final-project-css-course/assets/strawberries.jpg');
+    background-size: cover;
+}
+
+.follow-us_right{
+    padding: 50px;
+    margin: 0px;
+    width: 35%;
+    height: 100%;
+    background-image: url('/final-project-css-course/assets/strawberries2.jpg');
+    background-size: cover;
+}
+
+.follow-us-form h1{
+    font-size: 50px;
+    margin: 0px;
+}
+
+.follow-us-form p{
+    color: grey;
+    padding: 0px;
+    margin: 0px;
+}
+
+.follow-us-form{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.follow-us-form input[type="email"]{
+    width: 70%;
+    padding: 10px 5px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 15px;
+}
+
+.follow-us-form button{
+    color: white;
+    font-weight: 600;
+    margin: 5px 0px;
+    padding: 10px 30px;
+    background-color: rgb(214, 46, 46);
+    border-radius: 5px;
+    border: 1px solid rgb(194, 33, 33);
+}
+/* END FOLLOW-US SECTION */
+
+/* STATS SECTION */
+    #stats-section{
+        background-color: black;
+        height: 100px;
+    }
+/* END STATS SECTIEND ON */
