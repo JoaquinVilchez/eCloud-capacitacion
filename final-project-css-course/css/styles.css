@@ -99,6 +99,7 @@ a{
 
 #steps-section{
     display: flex;
+    height: 50%;
 }
 
 .steps_step > i{
@@ -138,7 +139,7 @@ a{
 #vegan-store-section{
     padding: 5% 0%;
     background-color: #FAEEE4;
-    height: 500px;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,7 +190,7 @@ a{
 #testimonials-section{
     padding: 5% 12%;
     background-color: white;
-    height: 600px;
+    height: 60%;
     text-align: center;
 }
 
@@ -246,7 +247,7 @@ a{
 /* FOLLOW-US SECTION */
 
 #follow-us-section{
-    height: 600px;
+    height: 60%;
     display: flex;
 }
 
@@ -278,7 +279,7 @@ a{
 .follow-us-form{
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    margin: 40px;
 }
 
 .follow-us-form input[type="email"]{
@@ -306,7 +307,7 @@ a{
     #stats-section{
         margin: 5% 15%;
         background-color: white;
-        height: 150px;
+        height: 10%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -331,6 +332,10 @@ a{
 
 /* VIDEO SECTION */
     #video-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         margin: 5% 15%;
         background-color: white;
@@ -347,6 +352,11 @@ a{
         width: 100px;
         margin-bottom: 15px;
     }
+
+    .video-section-iframe{
+        width: 800px;
+        height: 360px; 
+    }
 /* END VIDEO SECTION */
 
 /* CONTACT SECTION */
@@ -354,15 +364,17 @@ a{
 #contact-section{
     display: flex;
     justify-content: center;
-    margin: 5% 15%;
+    padding: 5% 15%;
 }
 
 .contact-left{
     width: 50%;
+    margin-right: 10px;
 }
 
 .contact-right{
     width: 50%;
+    margin-left: 10px;
 }
 
 .principal-information{
@@ -378,7 +390,7 @@ a{
 
 .principal-information h1{
     margin: 0px;
-    font-size: 35px;
+    font-size: 2em;
 }
 
 .principal-information p{
@@ -388,7 +400,7 @@ a{
 }
 
 .store h3{
-    font-size: 25px;
+    font-size: 1.2em;
     margin: 0px;
 }
 
@@ -454,6 +466,7 @@ textarea:focus {
 
 /* FOOTER SECTION */
 #footer-section{
+    font-size: .7em;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -462,3 +475,107 @@ textarea:focus {
     color: white;
 }
 /* END FOOTER SECTION */
+
+/* RESPONSIVE */
+
+
+@media (max-width: 1024px){
+    *{
+        /* background-color: lightblue;   */
+    }
+
+    .follow-us-form{
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px){
+    *{
+        /* background-color: lightgreen;   */
+    }
+
+    #steps-section{
+        flex-direction: column;
+    }
+
+    .vegan-store_items{
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    .testimonial_cards{
+        flex-direction: column;
+    }
+
+    #contact-section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0%;
+    }
+
+    .header_menu{
+        display: none;
+    }
+
+    #header-section{
+        display: none;
+    }
+
+    .video-section-iframe{
+        width: 400px;
+        height: 360px; 
+    }
+
+    #follow-us-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .follow-us_left{
+        display: none;
+    }
+    
+    .follow-us_right{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    #stats-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+@media (max-width: 480px){
+    *{
+        /* background-color: lightcoral;   */
+    }
+
+    .video-section-iframe{
+        width: 300px;
+        height: 360px; 
+    }
+
+    .testimonial_cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .testimonial_card{
+        width: 70%;
+    }
+}
+
+
+/* END RESPONSIVE */
