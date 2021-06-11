@@ -13,10 +13,12 @@ a{
 #header-section{
     background-color: white;
     font-size: 14px;
-    padding: 10px 40px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 98%;
 }
 
 
@@ -65,22 +67,31 @@ a{
     background-image: url('/final-project-css-course/assets/hero-image.jpg');
 }
 
-#hero-section .hero-text{
+.hero-background{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.hero-text{
     text-align: center;
     flex-wrap: wrap;
     margin: 0px 10%;
 }
 
-#hero-section .hero-text h1{
+.hero-text h1{
+    color: white;
     margin: 0px;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 40px;
 }
 
-#hero-section .hero-text p{
+.hero-text p{
+    color: white;
     margin-top: 10px;
-    color: gray;
 }
+
 
 /* END HERO SECTION */
 
@@ -241,7 +252,6 @@ a{
 
 .follow-us_left{
     width: 65%;
-    height: 100%;
     background-image: url('/final-project-css-course/assets/strawberries.jpg');
     background-size: cover;
 }
@@ -250,7 +260,6 @@ a{
     padding: 50px;
     margin: 0px;
     width: 35%;
-    height: 100%;
     background-image: url('/final-project-css-course/assets/strawberries2.jpg');
     background-size: cover;
 }
@@ -275,10 +284,11 @@ a{
 .follow-us-form input[type="email"]{
     width: 70%;
     padding: 10px 5px;
-    margin: 10px;
+    margin: 10px 0px;
     border-radius: 5px;
     border: 1px solid white;
     font-size: 15px;
+    box-shadow: 1px 1px 10px grey;
 }
 
 .follow-us-form button{
@@ -294,7 +304,161 @@ a{
 
 /* STATS SECTION */
     #stats-section{
-        background-color: black;
-        height: 100px;
+        margin: 5% 15%;
+        background-color: white;
+        height: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .stat-item{
+        text-align: center;
+        margin: 0px;
+    }
+
+    .stat-item h1{
+        font-size: 40px;
+        margin: 0px;
+    }
+    
+    .stat-item p{
+        color: rgb(23, 148, 148);
+        font-style: italic;
+        margin: 0px;
     }
 /* END STATS SECTIEND ON */
+
+/* VIDEO SECTION */
+    #video-section{
+        text-align: center;
+        margin: 5% 15%;
+        background-color: white;
+    }
+
+    #video-section h1{
+        font-size: 40px;
+        color: gray;
+        font-weight: 400;
+        margin: 0px;
+    }
+
+    .line{
+        width: 100px;
+        margin-bottom: 15px;
+    }
+/* END VIDEO SECTION */
+
+/* CONTACT SECTION */
+
+#contact-section{
+    display: flex;
+    justify-content: center;
+    margin: 5% 15%;
+}
+
+.contact-left{
+    width: 50%;
+}
+
+.contact-right{
+    width: 50%;
+}
+
+.principal-information{
+    margin-bottom: 25px;
+}
+
+.principal-information .subtitle{
+    font-family: 'Just Another Hand', cursive;
+    font-size: 25px;
+    margin: 0px;
+    color: grey;
+}
+
+.principal-information h1{
+    margin: 0px;
+    font-size: 35px;
+}
+
+.principal-information p{
+    margin: 0px;
+    font-size: 15px;
+    color: grey;
+}
+
+.store h3{
+    font-size: 25px;
+    margin: 0px;
+}
+
+.store ul{
+    margin: 0 0 30px 0px;
+    padding-left: 10px;
+}
+
+.store ul li{
+    list-style: none;
+    color: grey;
+    line-height: 30px;
+}
+
+.contact-form form{
+    width: 100%;
+}
+
+.contact-form input{
+    padding: 10px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin: 7px 0px;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+.contact-form textarea{
+    padding: 10px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin: 7px 0px;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid rgb(216, 216, 216);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea:focus {
+    outline: none !important;
+    border: 1px solid rgb(216, 216, 216);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button{
+    background-color: #bfda3d;
+    padding: 10px 25px;
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+.contact-form button:hover{
+    cursor: pointer;
+    background-color: #c8e633;
+}
+/* END CONTACT SECTION */
+
+/* FOOTER SECTION */
+#footer-section{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+/* END FOOTER SECTION */
