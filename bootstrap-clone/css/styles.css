@@ -1,0 +1,146 @@
+@font-face{
+    font-family: 'Metropolis';
+    src: url('/bootstrap-clone/assets/fonts/metropolis.regular.otf');
+    src: url('/bootstrap-clone/assets/fonts/metropolis.bold.otf');
+}
+
+body{
+    font-family: 'Metropolis';
+}
+
+.navbar-custom {
+    background-color: #2C3E50;
+}
+
+.navbar-custom a{
+    color: white;
+}
+
+.navbar-brand{
+    font-size: 1.8em;
+}
+
+#hero{
+    height: 600px;
+    text-align: center;
+    background-color: #1ABC9C;
+}
+
+#hero h1{
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.hero-img{
+    width: 18%;
+}
+
+.divider{
+    font-size: 35px;
+}
+
+.line{
+    margin: 0px 20px;
+    background-color: black;
+    width: 100px;
+    height: 4px;
+    border-radius: 5px;
+}
+
+/* FIXME: ¿Porque no me funciona esto? Quiero hacer que cuando le agrego la clase .divider-white se transforme en blanco" */
+
+.divider .divider-white{
+    color: white;
+}
+
+.divider .divider-white > .line{
+    background-color: white;
+}
+
+.skills{
+    color: white;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+#portfolio{
+    height: 1000px;
+    text-align: center;
+    background-color: #ffff;
+}
+
+.card-img{
+    background-color: #1ABC9C;
+    width: 25rem;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* TODO: No puedo hacer que al pasar el mouse se ponga el fondo de color celeste en la imagen */
+
+.card-img:hover{
+    cursor: pointer;
+    background-color: rgba(26, 188, 156, 0.5);
+}
+
+#about{
+    height: 500px;
+    text-align: center;
+    background-color: #1ABC9C;
+}
+
+.about-text{
+    color: white;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+#contact{
+    height: 900px;
+    background-color: #ffff;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+#footer{
+    height: 250px;
+    background-color: #2C3E50;
+}
+
+.social > i{
+    border-radius: 100px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border: 1px solid white;
+}
+
+.social > i:hover{
+    border-radius: 100px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    color: #2C3E50;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid white;
+}
+
+@media (max-width: 767.98px) {
+    #footer{
+        height: 400px;
+    }
+
+    .footer-element{
+        margin: 20px 0px;
+    }
+}
+
+#copyright{
+    color: white;
+    background-color: #000000;
+}
