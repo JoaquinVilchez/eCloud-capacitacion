@@ -64,7 +64,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;background-size: cover;
-    background-image: url('/final-project-css-course/assets/hero-image.jpg');
+    background-image: url('../assets/hero-image.jpg');
 }
 
 .hero-background{
@@ -253,7 +253,7 @@ a{
 
 .follow-us_left{
     width: 65%;
-    background-image: url('/final-project-css-course/assets/strawberries.jpg');
+    background-image: url('../assets/strawberries.jpg');
     background-size: cover;
 }
 
@@ -261,7 +261,7 @@ a{
     padding: 50px;
     margin: 0px;
     width: 35%;
-    background-image: url('/final-project-css-course/assets/strawberries2.jpg');
+    background-image: url('../assets/strawberries2.jpg');
     background-size: cover;
 }
 

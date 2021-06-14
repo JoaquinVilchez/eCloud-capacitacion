@@ -1,0 +1,25 @@
+.vertical-line{
+    height: 100%;
+    background-color: rgb(134, 134, 134);
+    width: 1px;
+    margin: 0px 15px;
+}
+
+.task-card > a{
+    cursor: pointer;
+    color: rgb(134, 134, 134);
+}
+
+.task-card > a:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.output-message.success-message{
+    color: green;
+}
+
+.output-message.error-message{
+    color: red;
+}
+
