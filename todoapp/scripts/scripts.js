@@ -98,6 +98,8 @@ function addTask(data){
         trashIcon.classList.add('fas', 'fa-trash')
         link.appendChild(trashIcon)
         cardInnerElement.appendChild(link)
+
+        taskInput.focus()
     }
 }
 
@@ -112,7 +114,7 @@ function deleteTask(id){
             tasks.splice(position,1)
         }
     }
-    
+
     showSuccessMessage('Tarea eliminada con éxito')
     checkTaskCount()
 }
