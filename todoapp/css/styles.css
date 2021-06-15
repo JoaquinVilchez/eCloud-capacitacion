@@ -15,11 +15,15 @@
     color: black;
 }
 
-.output-message.success-message{
+.task-card > p {
+    margin: 0px;
+}
+
+#success-message{
     color: green;
 }
 
-.output-message.error-message{
+#error-message{
     color: red;
 }
 
