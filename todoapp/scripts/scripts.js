@@ -81,15 +81,19 @@ function addTask(data){
         cardElement.classList.add('card', 'my-2')
         cardElement.setAttribute('id', 'task-'+id);
         cards.appendChild(cardElement)
+
         let cardInnerElement = document.createElement('div')
         cardInnerElement.classList.add('task-card', 'card-body', 'd-flex', 'align-items-center', 'justify-content-between')
         cardElement.appendChild(cardInnerElement)
+
         let cardInnerTextElement = document.createElement('p')
         cardInnerElement.appendChild(cardInnerTextElement)
         cardInnerTextElement.appendChild(document.createTextNode(data))
+
         let link = document.createElement('a')
         link.href = '#'
         link.setAttribute('onclick', 'deleteTask('+id+')')
+
         let trashIcon = document.createElement('i')
         trashIcon.classList.add('fas', 'fa-trash')
         link.appendChild(trashIcon)
@@ -100,6 +104,15 @@ function addTask(data){
 function deleteTask(id){
     let element = document.getElementById('task-'+id)
     element.remove()
+    
+    for (var i = 0; i < tasks.length; i++) {
+        var obj = tasks[i]
+        if(obj.id==id){
+            let position = tasks.indexOf(obj)
+            tasks.splice(position,1)
+        }
+    }
+    
     showSuccessMessage('Tarea eliminada con éxito')
-
+    checkTaskCount()
 }
