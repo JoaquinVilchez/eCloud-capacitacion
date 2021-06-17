@@ -1,15 +1,18 @@
-let errorMessage = document.getElementById('error-message')
-let successMessage = document.getElementById('success-message')
-let taskForm = document.getElementById('task-form')
-let taskInput = document.getElementById('task-input')
-let submitButton = document.getElementById('success-button')
-let cards = document.getElementById('cards')
-let noneTaskCard = document.getElementById('none-task-card')
-let id = 0;
-let tasks = [];
+import { taskInterface } from "./taskInterface"
+
+let errorMessage:HTMLElement = <HTMLInputElement>document.getElementById('error-message')
+let successMessage:HTMLElement = <HTMLInputElement>document.getElementById('success-message')
+let taskForm:HTMLElement = <HTMLInputElement>document.getElementById('task-form')
+let taskInput:HTMLElement = <HTMLInputElement>document.getElementById('task-input')
+let submitButton:HTMLElement = <HTMLInputElement>document.getElementById('success-button')
+let cards:HTMLElement = <HTMLInputElement>document.getElementById('cards')
+let noneTaskCard:HTMLElement = <HTMLInputElement>document.getElementById('none-task-card')
+let id:number = 0;
+let tasks:taskInterface[] = []; 
 
 errorMessage.classList.add('d-none')
 successMessage.classList.add('d-none')
+console.log(taskInput.value)
 
 function checkTaskCount(){
     if(tasks.length==0){
@@ -24,17 +27,19 @@ taskInput.addEventListener('keypress', function(e){
     if(keyCode==13){
         e.preventDefault()
         addTask(taskInput.value)
+        console.log(taskInput.value)
     }
 })
 
 submitButton.addEventListener('click', function(e){
         e.preventDefault()
         addTask(taskInput.value)
+        console.log(taskInput.value)
 })
 
 
 
-function validate(value){
+function validate(value:string):boolean{
     if(value==""){
         showErrorMessage("El campo tareas no puede estar vacío")
         return false;
@@ -45,7 +50,7 @@ function validate(value){
     }
 }
 
-function showErrorMessage(message){
+function showErrorMessage(message:string):void{
     errorMessage.innerHTML = message+" <i class='far fa-times-circle'></i>"
     errorMessage.classList.remove('d-none')
     setTimeout(function(){
@@ -53,7 +58,7 @@ function showErrorMessage(message){
     },1000)
 }
 
-function showSuccessMessage(message){
+function showSuccessMessage(message:string):void{
     successMessage.innerHTML = message+" <i class='far fa-check-circle'></i>"
     successMessage.classList.remove('d-none')
     setTimeout(function(){
@@ -62,12 +67,11 @@ function showSuccessMessage(message){
 
 }
 
-function addTask(data){
-    let validation = validate(data)
-    if(validation){
+function addTask(data:string):void{
+    if(validate(data)){
         id += 1
 
-        task = {
+        let task:taskInterface = {
             id: id,
             text: data
         }
@@ -92,7 +96,7 @@ function addTask(data){
 
         let link = document.createElement('a')
         link.href = '#'
-        link.setAttribute('onclick', 'deleteTask('+id+')')
+        link.setAttribute('onclick', `deleteTask(${id})`)
 
         let trashIcon = document.createElement('i')
         trashIcon.classList.add('fas', 'fa-trash')
@@ -103,8 +107,8 @@ function addTask(data){
     }
 }
 
-function deleteTask(id){
-    let element = document.getElementById('task-'+id)
+function deleteTask(id:number):void{
+    let element:HTMLElement = <HTMLInputElement>document.getElementById('task-'+id)
     element.remove()
     
     for (var i = 0; i < tasks.length; i++) {
