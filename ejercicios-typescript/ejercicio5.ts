@@ -1,5 +1,3 @@
-import { Product } from "./models/Product.js"
-
 // 5. Recorrer el arreglo de productos y hacer un incremento del 10% del valor en el precio de cada producto.
 console.log('::::::::Ejercicio 5::::::::')
 

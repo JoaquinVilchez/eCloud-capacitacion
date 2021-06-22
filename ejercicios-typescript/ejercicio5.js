@@ -1,4 +1,4 @@
-import { Product } from "./models/Product.js";
+"use strict";
 // 5. Recorrer el arreglo de productos y hacer un incremento del 10% del valor en el precio de cada producto.
 console.log('::::::::Ejercicio 5::::::::');
 var product1 = new Product('Teclado', 'Logitech', 1500, 1187);
