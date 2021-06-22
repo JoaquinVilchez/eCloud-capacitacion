@@ -4,11 +4,13 @@
 console.log('::::::::Ejercicio 3::::::::');
 class Product {
     constructor(title, description, price, sku) {
-        this.increments = (percentage) => this.price = this.price + (this.price * percentage / 100);
         this.title = title;
         this.description = description;
         this.price = price;
         this.sku = sku;
+    }
+    increments(percentage) {
+        this.price = this.price + (this.price * percentage / 100);
     }
 }
 var product1 = new Product('Remera', 'Remera mangas cortas', 1500, 7824);
