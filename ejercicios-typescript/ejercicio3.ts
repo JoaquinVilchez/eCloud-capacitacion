@@ -1,20 +1,9 @@
 // 3. Crear una clase llamada Product (con sus datos: title, description, price, sku). Crear una instancia de esta clase. 
+
+import { Product } from "./models/Product.js"
+
 //Crear un arreglo de “productos” (5 productos).
 console.log('::::::::Ejercicio 3::::::::')
-
-class Product {
-    title:string;
-    description:string;
-    price:number;
-    sku:number;
-
-    constructor(title:string,description:string,price:number,sku:number){
-        this.title = title;
-        this.description = description;
-        this.price = price;
-        this.sku = sku;
-    }
-}
 
 var product1 = new Product('Remera', 'Remera mangas cortas', 1500, 7824)
 var product2 = new Product('Jean', 'Jean clasico', 3500, 9812)

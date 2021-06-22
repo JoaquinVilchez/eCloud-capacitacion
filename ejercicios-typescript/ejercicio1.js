@@ -5,6 +5,6 @@ console.log('Nombre funcion: sum(a,b)');
 function sum(a, b) {
     return a + b;
 }
-var num1 = 5;
-var num2 = 10;
-console.log("   Suma de " + num1 + "+" + num2 + " =", sum(num1, num2));
+let num1 = 5;
+let num2 = 10;
+console.log(`   Suma de ${num1}+${num2} =`, sum(num1, num2));

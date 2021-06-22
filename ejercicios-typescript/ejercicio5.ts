@@ -1,6 +1,8 @@
+import { Product } from "./models/Product.js"
 
 // 5. Recorrer el arreglo de productos y hacer un incremento del 10% del valor en el precio de cada producto.
 console.log('::::::::Ejercicio 5::::::::')
+
 var product1 = new Product('Teclado', 'Logitech', 1500, 1187)
 var product2 = new Product('Mouse', 'Logitech', 1000, 5244)
 var product3 = new Product('Monitor', 'DELL', 30000, 1258)
@@ -20,10 +22,14 @@ listOfProductsToIncrement.forEach(product => {
     console.log(product.title, `$${product.price}`)
 });
 
-listOfProductsToIncrement.map(function(item:Product){
-    item.price = item.price+(item.price*0.1);
-    return item;
-})
+listOfProductsToIncrement.forEach(item => {
+    item.increments(10)
+});
+
+// listOfProductsToIncrement.map(function(item:Product){
+//     item.price = item.price+(item.price*0.1);
+//     return item;
+// })
 
 console.log("Precio actualizados de los productos: ", )
 listOfProductsToIncrement.forEach(product => {  

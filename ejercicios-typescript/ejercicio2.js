@@ -3,11 +3,11 @@
 console.log('::::::::Ejercicio 2::::::::');
 console.log('Nombre funcion: sumNumbers(a,b,c,...,n)');
 function sumNumbers(numbers) {
-    var sum = 0;
-    numbers.forEach(function (element) {
+    let sum = 0;
+    numbers.forEach(element => {
         sum = sum + element;
     });
     return sum;
 }
-var numbers = [1, 5, 7, 2, 4];
-console.log("   Suma de " + numbers + " = ", sumNumbers(numbers));
+let numbers = [1, 5, 7, 2, 4];
+console.log(`   Suma de ${numbers} = `, sumNumbers(numbers));

@@ -1,5 +1,8 @@
 // 4. “Programita”: Armar un programa que permita buscar por sku un producto dentro de la lista anterior, 
 //y en caso de que exista muestre (console.log), este producto o en caso de que no, un mensaje advirtiendo 
+
+import { Product } from "./models/Product.js"
+
 //que no existe (console.error).
 console.log('::::::::Ejercicio 4::::::::')
 
@@ -16,7 +19,6 @@ let listOfProducts:Product[] = [
     product4,   
     product5
 ]
-
 
 var result:boolean = false;
 do{
