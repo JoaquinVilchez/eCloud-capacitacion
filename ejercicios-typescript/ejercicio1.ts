@@ -2,7 +2,7 @@
 console.log('::::::::Ejercicio 1::::::::')
 console.log('Nombre funcion: sum(a,b)')
 
-const sum = (a:number,b:number):number => {return a+b}
+const sum = (a:number,b:number):number => a+b
 
 let num1:number=5;
 let num2:number=10;

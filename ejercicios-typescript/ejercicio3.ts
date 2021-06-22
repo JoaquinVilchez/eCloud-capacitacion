@@ -15,9 +15,7 @@ class Product {
         this.sku = sku;
     }
 
-    increments(percentage:number){
-            this.price = this.price+(this.price*percentage/100)
-    }
+    increments = (percentage:number) => this.price = this.price+(this.price*percentage/100)
 }
 
 var product1 = new Product('Remera', 'Remera mangas cortas', 1500, 7824)

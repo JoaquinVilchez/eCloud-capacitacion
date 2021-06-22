@@ -23,11 +23,7 @@ do{
     var skuInput:number = parseInt(prompt('Buscar producto por SKU [Probar con: 4711, por ejemplo]'));
 }while(isNaN(skuInput));
 
-//ME DEVUELVE UN ERROR PERO ANDA BIEN
-
-searchProduct(skuInput)
-
-function searchProduct(sku?:number){
+const searchProduct = (sku?:number) => {
     listOfProducts.forEach(item => {
         if(item.sku===sku){
             result = true;
@@ -39,3 +35,6 @@ function searchProduct(sku?:number){
         console.error(`No hay ningun producto con el SKU ${sku}`)
     }
 }
+
+//ME DEVUELVE UN ERROR PERO ANDA BIEN
+searchProduct(skuInput)
