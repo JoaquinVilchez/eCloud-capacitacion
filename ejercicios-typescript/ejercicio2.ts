@@ -2,7 +2,7 @@
 console.log('::::::::Ejercicio 2::::::::')
 console.log('Nombre funcion: sumNumbers(a,b,c,...,n)')
 
-function sumNumbers(numbers:number[]):number{
+const sumNumbers = (numbers:number[]):number => {
     let sum:number = 0;
     numbers.forEach(element => {
         sum = sum+element
