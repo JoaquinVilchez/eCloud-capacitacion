@@ -20,26 +20,45 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="https://unpkg.com/vuex@3.6.2/dist/vuex.js"></script>
 
+    <!-- mapState permite usar de forma mas practica las mutaciones, evitando
+    escribir $store.state.numero cada vez que se llama. Esto se realiza con cun
+    computed en cada componente donde se quiera utilizar y se le aplica el
+    operador Object Spread de ES6 - ...Vuex.mapState(["nombreMutacion1",
+    "nombreMutacion2", ..., n]) para luego ser llamado en el componente solo
+    por el nombre que se le asigno a la mutacion. 
+    Si se quiere agregar mas de un parametro, solo basta con poner en la 
+    definicion @click el nombre de la mutacion y el parametro entre parentesis-->
+
     <script>
       Vue.component("titulo", {
         template: `
-        <div>
-            <p>Padre:</p>
-            <h1>Numero {{$store.state.numero}}</h1>
-            <hr>
-            <p>Hijo:</p>
-            <hijo></hijo>
-        </div>
-    `,
+          <div>
+              <p>Padre:</p>
+              <h1>Numero {{numero}}</h1>
+              <hr>
+              <p>Hijo:</p>
+              <hijo></hijo>
+          </div>
+        `,
+        computed: {
+          ...Vuex.mapState(["numero"]),
+        },
       });
 
       Vue.component("hijo", {
         template: `
               <div>
-                  <button @click="$store.commit('aumentar')">+</button>
-                  <h1>Numero {{$store.state.numero}}</h1>
+                  <button @click="aumentar">+</button>
+                  <button @click="disminuir(2)">-</button>
+                  <h1>Numero {{numero}}</h1>
               </div>
           `,
+        computed: {
+          ...Vuex.mapState(["numero"]),
+        },
+        methods: {
+          ...Vuex.mapMutations(["aumentar", "disminuir"]),
+        },
       });
 
       const store = new Vuex.Store({
@@ -49,6 +68,9 @@
         mutations: {
           aumentar(state) {
             state.numero++;
+          },
+          disminuir(state, n) {
+            state.numero -= n;
           },
         },
       });
