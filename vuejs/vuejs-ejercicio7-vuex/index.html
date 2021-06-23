@@ -36,7 +36,8 @@
       Vue.component("hijo", {
         template: `
               <div>
-                  <button>+</button>
+                  <button @click="$store.commit('aumentar')">+</button>
+                  <h1>Numero {{$store.state.numero}}</h1>
               </div>
           `,
       });
@@ -45,11 +46,16 @@
         state: {
           numero: 10,
         },
+        mutations: {
+          aumentar(state) {
+            state.numero++;
+          },
+        },
       });
 
       new Vue({
         el: "#app",
-        sotre: store,
+        store: store,
       });
     </script>
   </body>
